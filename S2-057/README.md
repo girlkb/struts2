@@ -154,7 +154,7 @@ public static Object add(Object v1, Object v2) {//v1 111,v2 2111
 
 ![4.png](https://github.com/girlkb/struts2/blob/master/S2-057/4.png)
 
-与验证漏洞存在相同，最后触发漏洞的原因是调用了TextParseUtil.translateVariables()方法，
+与验证漏洞存在相同，起点是ServletActionRedirectResult.execute()方法,最后触发漏洞的原因是调用了TextParseUtil.translateVariables()方法，
 ![2.png](https://github.com/girlkb/struts2/blob/master/S2-057/2.png)
 而最后执行命令是调用的OgnlRuntime.invokerMethod()方法。![3.png](https://github.com/girlkb/struts2/blob/master/S2-057/3.png)
 
