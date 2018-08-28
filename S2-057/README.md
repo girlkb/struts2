@@ -87,7 +87,7 @@ public void execute(ActionInvocation invocation) throws Exception {
 getUrlFromActionMapping()返回一个使用namespace构造的url字符串ActionMapping
 
 
-![屏幕快照 2018-08-24 上午11.13.20](/Users/elsa/Desktop/屏幕快照 2018-08-24 上午11.13.20.png)
+![1.png](https://github.com/girlkb/struts2/blob/master/S2-057/1.png)
 
 =>ServletRedirectResult.class
 
@@ -152,9 +152,11 @@ public static Object add(Object v1, Object v2) {//v1 111,v2 2111
 
 如下图所示，为调试过程中打得断点
 
-![屏幕快照 2018-08-28 上午10.59.11](/Users/elsa/Desktop/屏幕快照 2018-08-28 上午10.59.11.png)
+![4.png](https://github.com/girlkb/struts2/blob/master/S2-057/4.png)
 
-与验证漏洞存在相同，最后触发漏洞的原因是调用了TextParseUtil.translateVariables()方法，而最后执行命令是调用的OgnlRuntime.invokerMethod()方法。![屏幕快照 2018-08-27 下午7.18.52](/Users/elsa/Desktop/屏幕快照 2018-08-27 下午7.18.52.png)
+与验证漏洞存在相同，最后触发漏洞的原因是调用了TextParseUtil.translateVariables()方法，
+![2.png](https://github.com/girlkb/struts2/blob/master/S2-057/2.png)
+而最后执行命令是调用的OgnlRuntime.invokerMethod()方法。![3.png](https://github.com/girlkb/struts2/blob/master/S2-057/3.png)
 
 #### 4.参考
 
